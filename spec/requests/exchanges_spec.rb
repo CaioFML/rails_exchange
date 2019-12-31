@@ -12,7 +12,7 @@ RSpec.describe 'Exchanges', type: :request do
     let!(:amount) { rand(1..9999) }
 
     it 'returns http success' do
-      post '/convert', params: {
+      get '/convert', params: {
                         source_currency: "USD",
                         target_currency: "BRL",
                         amount: amount
