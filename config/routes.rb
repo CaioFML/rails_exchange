@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root 'exchanges#index'
-  post 'convert', to: 'exchanges#convert'
+  get 'convert', to: 'exchanges#convert'
 end
