@@ -1,4 +1,5 @@
 {
+  "engines" : { "node" : ">=6" },
   "name": "rails_exchange",
   "private": true,
   "dependencies": {
