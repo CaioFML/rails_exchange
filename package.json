@@ -1,5 +1,7 @@
 {
-  "engines" : { "node" : ">=6" },
+  "engines": {
+    "node": ">=6"
+  },
   "name": "rails_exchange",
   "private": true,
   "dependencies": {
@@ -9,6 +11,7 @@
     "@rails/webpacker": "4.2.2",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
+    "tether": "^1.4.7",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
