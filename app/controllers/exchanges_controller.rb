@@ -2,12 +2,12 @@ class ExchangesController < ApplicationController
   def index; end
 
   def convert
-    @value = ExchangeService.new(
+    value = ExchangeService.new(
       params[:source_currency],
       params[:target_currency],
       params[:amount]
     ).perform
 
-    render :index
+    render json: { "value": value }
   end
 end
