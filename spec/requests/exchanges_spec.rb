@@ -10,6 +10,13 @@ RSpec.describe 'Exchanges', type: :request do
 
   describe 'POST #convert' do
     context "when target_currency is BTC" do
+      before do
+        response = double
+        allow(response).to receive(:body).and_return "0.00003309"
+        allow(response).to receive(:code).and_return 200
+        allow(RestClient).to receive(:get).and_return response
+      end
+
       it 'returns http success' do
         get '/convert', params: {
                         source_currency: "BRL",
