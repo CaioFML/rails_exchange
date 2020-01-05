@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe ExchangeService do
   describe "#perform" do
-    subject(:perform) { ExchangeService.new("USD", "BRL", amount).perform }
+    subject(:perform) { ExchangeService.new("USD", "BRL", amount).process }
 
     let(:amount) { rand(0..9999) }
 
