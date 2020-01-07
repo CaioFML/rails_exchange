@@ -30,6 +30,19 @@ RSpec.describe 'Exchanges', type: :request do
     end
 
     context "with any other target_currency" do
+      before do
+        response = double
+        allow(response).to receive(:body).and_return body.to_json
+        allow(response).to receive(:code).and_return 200
+        allow(RestClient).to receive(:get).and_return response
+      end
+
+      let(:body) do
+        {
+          "currency"=>[{"currency"=>"USD/BRL", "value"=>"4.059"}]
+        }
+      end
+
       it 'returns http success' do
         get '/convert', params: {
                           source_currency: "USD",
