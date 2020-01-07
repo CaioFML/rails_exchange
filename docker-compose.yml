@@ -1,11 +1,11 @@
 version: "3"
- 
+
 services:
   postgres:
     image: "postgres:9.5"
     volumes:
       - postgres:/var/lib/postgresql/data
- 
+
   app:
     depends_on:
       - "postgres"
@@ -16,8 +16,7 @@ services:
     volumes:
       - .:/rails_exchange
       - gems:/gems
- 
- 
+
 volumes:
   postgres:
   gems:
