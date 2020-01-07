@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Exchange Currency Process", type: :feature, js: true do
+RSpec.describe "Exchange Currency Process", type: :system, js: true do
   before { visit '/' }
 
   it "shows exchange value" do
